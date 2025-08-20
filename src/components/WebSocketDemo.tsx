@@ -32,7 +32,7 @@ export default function WebSocketDemo() {
     }
 
     setConnectionStatus('Connecting...');
-    ws.current = new WebSocket('ws://fat-cobra-50.deno.dev');
+    ws.current = new WebSocket('wss://fat-cobra-50.deno.dev');
 
     ws.current.onopen = () => {
       setIsConnected(true);
