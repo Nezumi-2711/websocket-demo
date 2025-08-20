@@ -32,7 +32,7 @@ export default function WebSocketDemo() {
     }
 
     setConnectionStatus('Connecting...');
-    ws.current = new WebSocket('ws://localhost:8080');
+    ws.current = new WebSocket('ws://fat-cobra-50.deno.dev');
 
     ws.current.onopen = () => {
       setIsConnected(true);
@@ -148,7 +148,7 @@ export default function WebSocketDemo() {
           placeholder="Enter your name (optional)"
           value={senderName}
           onChange={(e) => setSenderName(e.target.value)}
-          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -190,7 +190,7 @@ export default function WebSocketDemo() {
           disabled={!isConnected}
           className={`flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
             !isConnected ? 'bg-gray-100 cursor-not-allowed' : ''
-          }`}
+          } text-black`}
         />
         <button
           onClick={sendMessage}
